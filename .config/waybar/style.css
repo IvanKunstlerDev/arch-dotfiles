@@ -1,0 +1,62 @@
+* {
+  all: unset;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Ubuntu", "Font Awesome 6 Free Solid";
+  color: #c0caf5;
+}
+
+window#waybar {
+  background-color: #1a1b26;
+}
+
+window#waybar > box {
+  margin: 6px 12px;
+}
+
+tooltip {
+  background-color: #1a1b26;
+  border: 1px solid #c0caf5;
+  border-radius: 6px;
+}
+
+tooltip label {
+  margin: 0 4px;
+}
+
+#workspaces button label {
+  font-family: "Font Awesome 6 Free Solid";
+  font-size: 14px;
+  font-weight: bold;
+  color: #414868;
+  padding: 0 4px;
+}
+#workspaces button.empty label {
+  font-family: "Font Awesome 6 Free Regular";
+}
+#workspaces button.active {
+}
+#workspaces button.active label {
+  color: #c0caf5;
+}
+
+#battery.warning {
+  color: #e0af68;
+}
+
+#battery.critical {
+  color: #f7768e;
+}
+
+#battery.charging {
+  color: #c0caf5;
+}
+
+#custom-lock:hover {
+  color: #e0af68;
+}
+
+#custom-power {
+  color: #f7768e;
+  margin-bottom: -2px;
+}

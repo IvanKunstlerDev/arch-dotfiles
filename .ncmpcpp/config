@@ -1,0 +1,12 @@
+# Files
+mpd_music_dir = "~/Music"
+lyrics_directory  = ~/.ncmpcpp/lyrics
+ncmpcpp_directory  = ~/.ncmpcpp
+
+# Connection
+mpd_host = "localhost"
+mpd_port = "8888"
+mpd_connection_timeout = "5"  
+mpd_crossfade_time = "5"
+
+allow_for_physical_item_deletion = "yes"

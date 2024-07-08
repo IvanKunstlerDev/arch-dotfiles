@@ -1,0 +1,94 @@
+// Configuracion general
+configuration {
+  modes:                  "drun";
+  show-icons:             true;
+  location:               2;
+  display-drun:           "";
+  drun-display-format:    "<span>{name}</span>";
+  font:                   "Noto Sans 14";
+}
+
+// Variables globales
+* {
+  black:                  #1a1b26;
+  gray3:                  #24283b;
+  gray2:                  #414869;
+  gray1:                  #565f89;
+  white:                  #c0caf5;
+  blue:                   #7aa2f7;
+  violet:                 #bb9af7;
+  background-color:       transparent;
+  text-color:             @white;
+  margin: 0;
+  padding: 0;
+}
+
+// Ventana
+window {
+  location:               "center";
+  anchor:                 "center";
+  x-offset:               0px;
+  y-offset:               0px;
+  fullscreen:             true;
+
+  background-color:       rgba(0,0,0,0.75);
+  border:                 0;
+}
+
+// Contenedor principal
+mainbox {
+  spacing:                32px;
+  margin:                 100px 300px;
+
+  children:               ["inputbar", "listview"];
+}
+
+// Barra de busqueda
+inputbar {
+  spacing:                12;
+  margin:                 0 200px;
+}
+prompt {
+  font:                   "Font Awesome 6 Free 14";
+  vertical-align:         0.5;
+}
+entry {
+  border:                 0 0 2px 0 solid;
+  border-color:           @gray1;
+  padding:                4px;
+}
+
+// Lista de elementos
+listview {
+  lines:                  4;
+  columns:                6;
+  spacing:                12px;
+  flow:                   horizontal;
+  fixed-columns:          true;
+}
+scrollbar {
+  handle-width:           4px;
+  handle-color:           @white;
+}
+
+// Elemento
+element {
+  orientation:            vertical;
+  padding:                12px;
+  border-radius:          10px;
+}
+element selected {
+  border-color:           @blue;
+  border:                 2px solid;
+}
+element-icon {
+  size:                   38px;
+}
+element-text {
+  horizontal-align:       0.5;
+  width:                  10px;
+  markup:                 true;
+}
+element-text selected {
+  text-color:             @blue;
+}

@@ -1,0 +1,10 @@
+{
+    "position": "top",
+    "margin": 0,
+    "spacing": 12,
+    "include": ["~/.config/waybar/modules.json"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-left": ["clock", "cpu", "memory", "disk"],
+    "modules-right": ["network", "backlight", "pulseaudio", "battery", "custom/lock", "custom/power"],
+    "reload_style_on_change": true
+}

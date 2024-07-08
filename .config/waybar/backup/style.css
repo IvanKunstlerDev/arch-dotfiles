@@ -1,0 +1,132 @@
+* {
+    all: unset;
+    font-family: "Iosevka", "Font Awesome 6 Free Solid", "Hack Nerd Font";
+    font-size: 18px;
+    color: #c0caf5;
+}
+
+window#waybar > box {
+    background-color: #1a1b26;
+    margin: 14px;
+    border-radius: 8px;
+    box-shadow: -3 3 4px 3px rgba(0, 0, 0, 0.7);
+}
+
+tooltip {
+    background-color: #1a1b26;
+    border-radius: 6px;
+    font-weight: bold;
+    border: 1px solid #c0caf5;
+}
+
+tooltip label {
+    margin: 0 4px;
+}
+
+
+#workspaces {
+    background-color: #24283b;
+    margin: 0 6px;
+    margin-top: 6px;
+    border-radius: 6px;
+}
+#workspaces label {
+    color: #7aa2f7;
+    font-size: 18px;
+    margin: 2px 0;
+}
+#workspaces button.empty label {
+    color: #565f89;
+}
+#workspaces button.active label {
+    color: #e0af68;
+    font-size: 20px;
+    margin: 0;
+    margin-left: -2px;
+}
+
+
+#custom-media,
+#custom-ethernet,
+#custom-bluetooth,
+#custom-battery,
+#custom-power,
+#custom-volume,
+#custom-brightness,
+#custom-lock {
+    margin: 0 6px;
+    min-height: 30px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+#custom-media:hover,
+#custom-ethernet:hover,
+#custom-bluetooth:hover,
+#custom-battery:hover,
+#custom-power:hover,
+#custom-volume:hover,
+#custom-brightness:hover,
+#custom-lock:hover {
+    background-color: #24283b;
+}
+
+
+#custom-media {
+    color: #bb9af7;
+}
+
+
+#custom-ethernet {
+    font-size: 16px;
+}
+
+
+#custom-bluetooth {
+    color: #7aa2f7;
+}
+
+
+#custom-volume {
+    color: #9aa5ce;
+}
+
+
+#custom-brightness {
+    color: #e0af68;
+}
+
+
+#custom-battery {
+    color: #9ece6a;
+    font-size: 22px;
+}
+#custom-battery.full {
+    color: #f7768e;
+}
+#custom-battery.battery-low {
+    color: #e0af68;
+}
+#custom-battery.battery-verylow {
+    color: #f7768e;
+}
+#custom-battery.charging {
+    color: #e0af68;
+}
+
+
+
+#clock {
+    background-color: #24283b;
+    font-family: "sans";
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 6px;
+    min-height: 50px;
+    border-radius: 6px;
+}
+
+
+#custom-power {
+    color: #f7768e;
+    margin-bottom: 6px;
+}

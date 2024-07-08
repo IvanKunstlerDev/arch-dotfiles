@@ -1,0 +1,8 @@
+* {
+    bg-color: #1a1b26;
+    bg-color-sec: #24283b;
+    primary-color: #7aa2f7;
+    secondary-color: #bb9af7;
+    primary-text: #c0caf5;
+    secondary-text: #414868;
+}

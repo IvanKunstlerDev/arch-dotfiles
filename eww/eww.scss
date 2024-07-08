@@ -1,0 +1,15 @@
+@import "colors";
+@import "scss/wifi.scss";
+
+* {
+  all: unset;
+  font-family: "Noto Sans", "Font Awesome 6 Free Solid";
+  font-weight: bold;
+  color: $gray1;
+}
+
+.generic-window {
+  background-color: $black;
+  box-shadow: $shadow;
+  margin: 8px;
+}

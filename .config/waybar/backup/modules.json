@@ -1,0 +1,80 @@
+{
+    "hyprland/workspaces": {
+        "active-only": false,
+        "persistent-workspaces": {
+            "*": 5
+        },
+        "format": "{icon}",
+        "format-icons": {
+            "active": "󰮯",
+            "default": ""
+        }
+    },
+
+    "custom/media": {
+        "exec": "~/.config/waybar/scripts/media.sh",
+        "return-type": "json",
+        "interval": "once",
+        "format": "{}",
+        "on-click": "sleep 0.1 && ~/.config/eww/media/launch"
+    },
+
+    "custom/ethernet": {
+        "exec": "~/.config/waybar/scripts/net.sh",
+        "return-type": "json",
+        "interval": "once",
+        "format": "{}"
+    },
+
+    "custom/bluetooth": {
+        "exec": "~/.config/waybar/scripts/bluetooth.sh",
+        "return-type": "json",
+        "interval": "once",
+        "format": "{}"
+    },
+
+    "custom/volume": {
+        "exec": "~/.config/waybar/scripts/volume.sh",
+        "return-type": "json",
+        "interval": 1,
+        "format": "{}",
+        "on-click-right": "pamixer --toggle-mute",
+        "on-click": "sleep 0.1 && ~/.config/eww/bar-controls/launch_vol"
+    },
+
+    "custom/brightness": {
+        "exec": "~/.config/waybar/scripts/brightness.sh",
+        "return-type": "json",
+        "interval": 1,
+        "format": "{}",
+        "on-click": "sleep 0.1 && ~/.config/eww/bar-controls/launch_bri"
+    },
+
+    "custom/battery": {
+        "exec": "~/.config/waybar/scripts/battery.sh",
+        "return-type": "json",
+        "interval": 1,
+        "format": "{}"
+    },
+
+    "clock": {
+        "format": "{:%H\n%M}",
+        "timezone": "America/Argentina/Buenos_Aires"
+    },
+
+    "custom/lock": {
+        "exec": "~/.config/waybar/scripts/lock.sh",
+        "return-type": "json",
+        "interval": "once",
+        "format": "{}",
+        "on-click": "sleep 0.1 && loginctl lock-session"
+    },
+    
+    "custom/power": {
+        "exec": "~/.config/waybar/scripts/power.sh",
+        "return-type": "json",
+        "interval": "once",
+        "on-click": "sleep 0.1 && ~/.config/eww/lock-screen/launch",
+        "format": "{}"
+    }
+}

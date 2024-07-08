@@ -1,0 +1,69 @@
+* {
+  background-color: transparent;
+  bg-color: #1a1b26;
+  blue: #7aa2f7;
+  white: #c0caf5;
+  gray: #565f89;
+  darkGray: #414868;
+}
+
+window {
+  width: 380px;
+  children: [ mainbox ];
+  y-offset: 20;
+}
+
+mainbox {
+  background-color: @bg-color;
+  padding: 12px;
+  spacing: 6px;
+}
+
+inputbar {
+  border: 0 0 2px 0 solid;
+  border-color: @darkGray;
+  padding: 0 0 6px 0;
+}
+
+prompt {
+  font: "Font Awesome 6 Free 11";
+  color: @white;
+  margin: 0px 6px;
+}
+
+entry {
+  placeholder: "Aplicaciones";
+  placeholder-color: @gray;
+  text-color: @white;
+  cursor: text;
+  cursor-width: 0;
+}
+
+listview {
+  lines: 5;
+}
+
+element {
+  orientation: horizontal;
+}
+element selected {
+  background-color: @blue;
+}
+
+element-icon {
+  size: 24px;
+  margin: 0 6px;
+}
+
+element-text {
+  margin: 6px 0;
+  color: @white;
+}
+element-text selected {
+  color: @bg-color;
+}
+
+mode-switcher {
+  background-color: @darkGray;
+  padding: 12px;
+}

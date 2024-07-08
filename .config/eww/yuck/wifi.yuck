@@ -1,0 +1,28 @@
+(defvar wifi_visible false)
+(defpoll WIFI_STATE :interval "10s" :initial "desconectado" "./scripts/wifi.sh state")
+
+(defwindow wifi
+    :monitor 0
+    :stacking "overlay"
+    :geometry (geometry :x "100px"
+                        :y -8
+                        :width "320px"
+                        :height "200px"
+                        :anchor "top right")
+    (wifi_widget)
+)
+
+(defwidget wifi_widget[]
+    (box :class "generic-window"
+        (box :class "wifi-ctn" :orientation "v"
+            :space-evenly false :spacing 24
+            (label :class "wifi-title" :text "Wifi")
+            (box :class "wifi-state" :orientation "h"
+                :space-evenly false
+                (label :text {WIFI_STATE ? "Activado" : "Desactivado"}
+                        :hexpand true :halign "start")
+                (checkbox :checked WIFI_STATE
+                            :onchecked "nmcli networking on"
+                            :onunchecked "nmcli networking off"
+                            :hexpand true :halign "end"))
+            ())))

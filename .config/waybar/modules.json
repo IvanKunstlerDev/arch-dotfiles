@@ -1,0 +1,98 @@
+{
+    "hyprland/workspaces": {
+        "active-only": false,
+        "persistent-workspaces": {
+            "*": 5
+        },
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "active": ""
+        }
+    },
+
+    "custom/weather": {
+      "exec": "python ~/.config/waybar/scripts/weather.py",
+      "restart-interval": 3600,
+      "return-type": "json",
+      "on-click": "xdg-open https://weather.com/es-AR/tiempo/hoy/l/070a5e55ac1447f8e6bb74533ad43e61a3b8591de9eb8d8ecbcb40a364a527af"
+    },
+
+    "clock": {
+      "interval": 60,
+      //"format": " {:L%H:%M      %A %d de %B, %Y}",
+      "format": " {:L%H:%M}",
+      "timezone": "America/Argentina/Buenos_Aires",
+      "tooltip-format": "{:L%A %d de %B, %Y}"
+    },
+
+    "cpu": {
+      "interval": 10,
+      "format": " {usage}%"
+    },
+
+    "memory": {
+      "interval": 30,
+      "format": " {percentage}%",
+      "tooltip-format": "{used}GB / {total}GB"
+    },
+
+    "disk": {
+      "interval": 30,
+      "format": " {percentage_used}%",
+      "tooltip-format": "{used} / {total}"
+    },
+
+    "custom/mpd": {
+      "exec": "~/.config/waybar/scripts/mpd.sh",
+      "return-type": "json",
+      "interval": 1,
+      "on-click": "sleep 0.1 && mpc toggle"
+    },
+
+    "network": {
+      "format-wifi": " {essid}",
+      "format-ethernet": "",
+      "format-disconnected": "",
+      "tooltip-format": "{signalStrength}% | {ipaddr}",
+      "on-click": "sleep 0.1 && ~/.config/eww/scripts/launch_wifi.sh"
+    },
+
+    "backlight": {
+      "format": " {percent}%"
+    },
+
+    "pulseaudio": {
+      "format": "{icon} {volume}%",
+      "format-icons": ["", "", ""],
+      "format-muted": ""
+    },
+
+    "battery": {
+      "interval": 5,
+      "format-discharging": "{icon} {capacity}%",
+      "format-icons": ["", "", "", "", ""],
+      "format-charging": " {capacity}%",
+      "tooltip-format-discharging": "{time} para descargarse",
+      "tooltip-format-charging": "{time} para completar la carga",
+      "states": {
+        "warning": 30,
+        "critical": 15
+    }
+    },
+
+    "custom/lock": {
+      "exec": "~/.config/waybar/scripts/lock.sh",
+      "return-type": "json",
+      "interval": "once",
+      "on-click": "sleep 0.1 && loginctl lock-session"
+    },
+
+    "custom/power": {
+      "exec": "~/.config/waybar/scripts/power.sh",
+      "return-type": "json",
+      "interval": "once",
+      "on-click": "sleep 0.1 && ~/.config/eww/lock-screen/launch",
+      "format": "{}"
+    }
+}
